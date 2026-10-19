@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pm-sensor-trust"
+version = "0.1.0"
+description = "Quality control and humidity correction for citizen PM2.5 sensor networks, on a Delta Lake medallion orchestrated by Dagster"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Cristian Caro" }]
+dependencies = [
+    "polars>=2.0,<3",
+    "deltalake>=1.6,<2",
+    "dagster>=1.13,<1.14",
+    "pandera[polars]>=0.34",
+    "pyarrow>=17",
+    "numpy>=1.26",
+    "matplotlib>=3.8",
+    "pyyaml>=6.0",
+    "typer>=0.12",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+pmtrust = "pmtrust.cli:app"
+
+[tool.setuptools]
+packages = ["pmtrust"]
+
+[tool.ruff]
+line-length = 130
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "N"]
+ignore = ["B008"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]

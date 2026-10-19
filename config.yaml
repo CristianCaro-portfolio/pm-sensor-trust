@@ -1,0 +1,53 @@
+# Study area: Stuttgart, Germany. Sensor.Community started here in 2015 and the
+# city has official PM stations from the state network (LUBW) published by UBA.
+area:
+  name: stuttgart
+  lat: 48.78
+  lon: 9.18
+  radius_km: 8
+
+reference:
+  # UBA station id 224 = DEBW013 Stuttgart-Bad Cannstatt, urban background
+  station_id: 224
+  station_code: DEBW013
+  lat: 48.8088
+  lon: 9.2297
+  # UBA hourly values are labelled with the start of the hour in CET (UTC+1, no DST).
+  utc_offset_hours: 1
+
+weather:
+  # DWD 4928 = Stuttgart (Schnarrenberg), synoptic station, hourly values in UTC.
+  # Used as the humidity for the correction because the network's own DHT22 and
+  # BME280 sensors saturate or drift in damp weather (measured in results/metrics.json).
+  station_id: 4928
+  name: Stuttgart (Schnarrenberg)
+
+windows:
+  calibrate: ["2026-01-12", "2026-01-25"]
+  test_winter: ["2026-01-26", "2026-02-08"]
+  test_autumn: ["2026-10-01", "2026-10-17"]
+
+qc:
+  max_pm: 999.0          # SDS011 upper limit of the measuring range
+  min_coverage: 0.5      # share of expected samples in the hour
+  expected_per_hour: 24  # firmware default is one reading every 145 s
+  flatline_hours: 3      # identical readings this long means a stuck sensor
+  spike_mad: 8.0         # jump vs rolling median, in robust sigmas
+  fog_rh: 95.0           # weather station RH at or above this is treated as fog
+  exclude_fog: false     # see docs/adr/0003; fog hours are corrected, not dropped
+  neighbours: 6          # spatial consistency uses the k nearest outdoor sensors
+  spatial_z: 4.0
+  spatial_persist_hours: 3
+  pm25_pm10_tolerance: 1.05
+  drift_ratio: [0.5, 2.0]
+  drift_window_hours: 168
+  rh_valid: [5.0, 100.5]
+  rh_offset: 15.0        # a humidity sensor this far from the weather station is suspect
+  temp_valid: [-30.0, 50.0]
+
+correction:
+  kappa_grid: [0.0, 0.025, 0.05, 0.075, 0.1, 0.15, 0.2, 0.3, 0.4, 0.6]
+  rh_cap: 95.0
+
+gold:
+  min_sensors: 5         # fewer trusted sensors than this and the city hour is not published
