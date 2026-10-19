@@ -1,0 +1,130 @@
+[
+ {
+  "sensor_id": 13463,
+  "sensor_type": "SDS011",
+  "location_id": 6804,
+  "lat": 48.774,
+  "lon": 9.174,
+  "indoor": 0
+ },
+ {
+  "sensor_id": 13464,
+  "sensor_type": "DHT22",
+  "location_id": 6804,
+  "lat": 48.774,
+  "lon": 9.174,
+  "indoor": 0
+ },
+ {
+  "sensor_id": 41139,
+  "sensor_type": "SDS011",
+  "location_id": 26881,
+  "lat": 48.784,
+  "lon": 9.192,
+  "indoor": 0
+ },
+ {
+  "sensor_id": 41140,
+  "sensor_type": "BME280",
+  "location_id": 26881,
+  "lat": 48.784,
+  "lon": 9.192,
+  "indoor": 0
+ },
+ {
+  "sensor_id": 49610,
+  "sensor_type": "SDS011",
+  "location_id": 35515,
+  "lat": 48.766,
+  "lon": 9.176,
+  "indoor": 0
+ },
+ {
+  "sensor_id": 49611,
+  "sensor_type": "BME280",
+  "location_id": 35515,
+  "lat": 48.766,
+  "lon": 9.176,
+  "indoor": 0
+ },
+ {
+  "sensor_id": 5127,
+  "sensor_type": "SDS011",
+  "location_id": 2582,
+  "lat": 48.77,
+  "lon": 9.19,
+  "indoor": 0
+ },
+ {
+  "sensor_id": 5128,
+  "sensor_type": "DHT22",
+  "location_id": 2582,
+  "lat": 48.77,
+  "lon": 9.19,
+  "indoor": 0
+ },
+ {
+  "sensor_id": 11933,
+  "sensor_type": "SDS011",
+  "location_id": 6026,
+  "lat": 48.784,
+  "lon": 9.198,
+  "indoor": 0
+ },
+ {
+  "sensor_id": 11934,
+  "sensor_type": "DHT22",
+  "location_id": 6026,
+  "lat": 48.784,
+  "lon": 9.198,
+  "indoor": 0
+ },
+ {
+  "sensor_id": 37239,
+  "sensor_type": "SDS011",
+  "location_id": 23130,
+  "lat": 48.76,
+  "lon": 9.178,
+  "indoor": 0
+ },
+ {
+  "sensor_id": 37240,
+  "sensor_type": "BME280",
+  "location_id": 23130,
+  "lat": 48.76,
+  "lon": 9.178,
+  "indoor": 0
+ },
+ {
+  "sensor_id": 422,
+  "sensor_type": "SDS011",
+  "location_id": 198,
+  "lat": 48.752,
+  "lon": 9.18,
+  "indoor": 0
+ },
+ {
+  "sensor_id": 423,
+  "sensor_type": "DHT22",
+  "location_id": 198,
+  "lat": 48.752,
+  "lon": 9.18,
+  "indoor": 0
+ },
+ {
+  "sensor_id": 94949,
+  "sensor_type": "SDS011",
+  "location_id": 88799,
+  "lat": 48.768,
+  "lon": 9.162,
+  "indoor": 0
+ },
+ {
+  "sensor_id": 94950,
+  "sensor_type": "BME280",
+  "location_id": 88799,
+  "lat": 48.768,
+  "lon": 9.162,
+  "indoor": 0
+ }
+]
