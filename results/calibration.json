@@ -1,0 +1,9 @@
+{
+  "kappa": 0.025,
+  "scale": 1.8796,
+  "cv_mae": 4.006,
+  "qc_scale": 1.6256,
+  "lin_slope": 1.4071,
+  "lin_intercept": 4.313,
+  "hours": 336
+}
